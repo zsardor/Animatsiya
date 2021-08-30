@@ -1,0 +1,288 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: black;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+body{
+	height: 100%;
+	background: #000;
+}
+
+.wrapper {
+	overflow: hidden;
+	opacity: 0;
+	transition: all 1.0s ease 0s;
+}
+.wrapper.active{
+	opacity: 1;
+}
+.wrapper.active .parallax_wave{
+	opacity: 1;
+	transition: all 1.0s ease 1.0s;
+}
+.wrapper.active .parallax_rope{
+	opacity: 1;
+	transition: all 1.0s ease 1.8s;
+}
+.wrapper.active .parallax_lightehouse{
+	bottom: 60px;
+	transition: all 0.8s ease 2.5s;
+}
+
+
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%; 
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 360px;
+}
+.parallax {
+	flex: 1 0 100%;
+	position: relative;
+	overflow: hidden;
+}
+.parallax:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	/*background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%);*/
+}
+.parallax_list {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.parallax_list li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.parallax_bg {
+	position: absolute;
+	width: 110%;
+	height: 110%;
+	top: -5%;
+	left: -5%;
+	background: url('../IMG/orqa fon.jpg') 50% 100% / cover no-repeat;
+}
+
+.parallax_rope {
+	position: absolute;
+	width: 120%;
+	left: -10%;
+	opacity: 0;
+}
+.parallax_rope img {
+	width: 100%;
+}
+.parallax_rope_1 {
+	top: 5%;
+	transform: scale(1);
+}
+.parallax_rope_2 {
+	top: -1.66667%;
+	transform: scale(1.05556);
+}
+.parallax_rope_3 {
+	top: -11.66667%;
+	transform: scale(1.13889);
+}
+.parallax_rope_1 .parallax_element{
+	transform: scale(0.6);
+}
+.parallax_rope_2 .parallax_element{
+	transform: scale(0.75556);
+}
+.parallax_rope_3 .parallax_element{
+	transform: scale(0.98889);
+}
+
+.parallax_element {
+	position: absolute;
+}
+.parallax_element span{
+	display: inline-block;
+	transform-origin: 50% 0;
+	width: 280px;
+	height: 280px;
+	margin: 0 0 0 -140px;
+	animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.parallax_element_1 {
+	top: 28%;
+	left: 25%;
+}
+.parallax_element_1 span{
+	background: url(../IMG/clouds/board-cloud-2.png) 0 0 / 50% no-repeat;
+}
+.parallax_element_2 {
+	top: 46%;
+	left: 43%;
+}
+.parallax_element_2 span{
+	background: url(../IMG/clouds/board-cloud-1.png) 0 0 / 50% no-repeat;
+}
+.parallax_element_3 {
+	top: 29%;
+	left: 80%;
+}
+.parallax_element_3 span{
+	background: url(../IMG/clouds/board-birds.png) 0 0 / 50% no-repeat;
+}
+.parallax_element_4 {
+	top: 10%;
+	left: 17%;
+}
+.parallax_element_4 span{
+	background: url(../IMG/clouds/board-cloud-1.png) 0 0 / 50% no-repeat;
+}
+.parallax_element_5 {
+	top: 67%;
+	left: 56%;
+}
+.parallax_element_5 span{
+	background: url(../IMG/clouds/board-cloud-4.png) 0 0 / 50% no-repeat;
+}
+.parallax_element_6 {
+	top: 63%;
+	left: 67%;
+}
+.parallax_element_6 span{
+	background: url(../IMG/clouds/board-cloud-2.png) 0 0 / 50% no-repeat;
+}
+.parallax_element_7 {
+	top: 60%;
+	left: 37%;
+}
+.parallax_element_7 span{
+	background: url(../IMG/clouds/board-birds.png) 0 0 / 50% no-repeat;
+}
+.parallax_element_8 {
+	top: 67%;
+	left: 50%;
+}
+.parallax_element_8 span{
+	background: url(../IMG/clouds/board-cloud-3.png) 0 0 / 50% no-repeat;
+}
+
+.parallax_wave {
+	position: absolute;
+	background: url('../IMG/waves/wave-plain.png') 0 0 / auto 101% repeat-x;
+	left: -100%;
+	width: 300%;
+	opacity: 0;
+
+}
+.parallax_wave_1 {
+	bottom: 110px;
+	height: 86px;
+	animation:wave 7.11111s 0.1s infinite linear;
+	background: url('../IMG/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax_wave_2 {
+	bottom: 74px;
+	height: 115px;
+	animation:wave 6.66667s 0.1s infinite linear;
+}
+.parallax_wave_3 {
+	bottom: 38px;
+	height: 144px;
+	animation:wave 6.22222s 0.1s infinite linear;
+	background: url('../IMG/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+.parallax_wave_4 {
+	bottom: 2px;
+	height: 173px;
+	animation:wave 5.77778s 0.1s infinite linear;
+}
+.parallax_wave_5 {
+	bottom: -71px;
+	height: 230px;
+	animation:wave 4.8888s 0.1s infinite linear;
+	
+}
+.parallax_wave_6 {
+	bottom: -142px;
+	height: 288px;
+	animation:wave 4.5s 0.1s infinite linear;
+	background: url('../IMG/waves/wave-paint.png') 0 0 / auto 101% repeat-x;
+}
+
+.parallax_lightehouse {
+	background: url('../IMG/mayoq tayoq.png') 0 0 / 120% no-repeat;
+	width: 240px;
+	height: 420px;
+	position: absolute;
+	right: 12%;
+	bottom: -100%;
+	animation: lightehouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.content {}
+
+@keyframes swing{
+	0%{
+		transform: rotateZ(10deg);
+	}
+	100%{
+		transform: rotateZ(-10deg);
+	}
+}
+@keyframes wave{
+	0%{
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+@keyframes lightehouse{
+	0%{
+		transform: translate3d(15%,0,0) rotateZ(10deg);
+	}
+	100%{
+		transform: translate3d(-15%,0,0) rotateZ(-10deg);
+	}
+}
+
+
+
+
+
+
+
